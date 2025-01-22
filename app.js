@@ -33,18 +33,24 @@ function generateAutoClicker(data) {
 }
 
 //you cannot afford this notification
+
+
 //also need to store cps value in local storage
 //same as cookie count
+
 
 //could potentially store cookie count and cps
 //in an object then target them to get their
 //value.
 
+
 //stringify, set item, getitem, parse will store
 //and retrieve object.
 
+
 //create purchases array that shows how many of each
 //item has been bought (also stored in local)
+
 
 //make sure things that need to be global variables
 //are in teh scope

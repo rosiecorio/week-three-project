@@ -35,3 +35,12 @@ header {
     padding-left: 40px;
     padding-right: 40px;
 }
+
+#clicker {
+    border: none;
+    background-color: white;
+}
+
+h4 {
+    font-size: 15px;
+}
