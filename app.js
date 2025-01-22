@@ -41,4 +41,10 @@ function generateAutoClicker(data) {
 //value.
 
 //stringify, set item, getitem, parse will store
-//and retrieve object.s
+//and retrieve object.
+
+//create purchases array that shows how many of each
+//item has been bought (also stored in local)
+
+//make sure things that need to be global variables
+//are in teh scope
