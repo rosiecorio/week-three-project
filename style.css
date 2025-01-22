@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+img {
+    height: 330px;
+}
+
+header {
+    text-align: center;
+    font-family: monospace;
+    margin-bottom: 100px;
+}
+
+.cookies {
+    text-align: center;
+}
+
+#cookieCount {
+    text-align: center;
+    font-size: 40px;
+}
+
+.cps {
+    text-align: center;
+    font-size: 20px;
+}
