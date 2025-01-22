@@ -2,7 +2,7 @@ const clicker = document.getElementById('clicker')
 const cookieCount = document.getElementById('cookieCount')
 const shopDiv = document.getElementById('shopDiv')
 let cps = document.getElementById('perSec')
-const autoClicker = document.getElementById(displayAutoClicker)
+const autoClicker = document.getElementById('displayAutoClicker')
 
 //adds 1 cookie for every click
 clicker.addEventListener('click', handleClick)
@@ -21,7 +21,7 @@ async function fetchShopData() {
 }
 
 function generateAutoClicker(data) {
-    displayAutoClicker.innerHTML = ''
+    autoClicker.innerHTML = ''
     console.log(data)
-    displayAutoClicker.innerText = data
+    autoClicker.innerText = data
 }

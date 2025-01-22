@@ -26,3 +26,10 @@ header {
     text-align: center;
     font-size: 20px;
 }
+
+.clicker-container {
+    display: flex;
+    height: 25px;
+    align-items: center;
+    gap: 10px;
+}
