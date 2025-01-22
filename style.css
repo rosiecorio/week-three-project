@@ -27,9 +27,11 @@ header {
     font-size: 20px;
 }
 
-.clicker-container {
+.shop-item-container {
     display: flex;
     height: 25px;
     align-items: center;
     gap: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
 }

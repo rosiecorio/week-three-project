@@ -3,13 +3,19 @@ const cookieCount = document.getElementById('cookieCount')
 const shopDiv = document.getElementById('shopDiv')
 let cps = document.getElementById('perSec')
 const autoClicker = document.getElementById('displayAutoClicker')
+const buyClicker = document.getElementById('buyClicker')
+
 
 //adds 1 cookie for every click
 clicker.addEventListener('click', handleClick)
-let currentCount = 1;
+
+let currentCount = localStorage.getItem('count') || 0;
+cookieCount.textContent = currentCount
 
 function handleClick() {
-    cookieCount.innerText = currentCount++
+    currentCount++
+    cookieCount.textContent = currentCount
+    localStorage.setItem('count', currentCount)
 }
 
 //fetching shop data
@@ -25,3 +31,7 @@ function generateAutoClicker(data) {
     console.log(data)
     autoClicker.innerText = data
 }
+
+//you cannot afford this notification
+//also need to store cps value in local storage
+//same as cookie count
