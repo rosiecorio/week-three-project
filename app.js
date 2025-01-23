@@ -9,23 +9,30 @@ const buyClicker = document.getElementById('buyClicker')
 //adds 1 cookie for every click
 clicker.addEventListener('click', handleClick)
 
-let currentCount = localStorage.getItem('count') || 0;
-cookieCount.textContent = currentCount
+let currentCount = parseInt(localStorage.getItem('count')) || 0;
+let cps = parseInt(localStorage.getItem('cps')) || 1;
+perSec.textContent = cps
 
 function handleClick() {
     currentCount++
-    cookieCount.textContent = currentCount
-    localStorage.setItem('count', currentCount)
+    updateCurrentCount()
 }
 
-//need to store value as number
-let cps = 1
-perSec.textContent = cps
+function updateCurrentCount() {
+    cookieCount.textContent = currentCount
+    cps.textContent = cps
+}
 
-cpsInterval = setInterval(() => {
-    currentCount = parseInt(currentCount) + cps;
-    cookieCount.textContent = currentCount;
+function saveStorage() {
+    localStorage.setItem('count', currentCount)
     localStorage.setItem('cps', cps)
+}
+//need to store value as number
+
+setInterval(() => {
+    currentCount = (currentCount) + cps;
+    updateCurrentCount()
+    localStorage.setItem('count', currentCount)
 }, 1000)
 
 //need to store cookie count with added cps in local storage
@@ -36,62 +43,62 @@ cpsInterval = setInterval(() => {
 //fetching shop data
 
 async function fetchShopData() {
-    const response = await fetch(`https://cookie-upgrade-api.vercel.app/api/upgrades`)
+    const response = await fetch('https://cookie-upgrade-api.vercel.app/api/upgrades')
     const data = await response.json()
     console.log(data)
     generateShopItem(data)
 }
 
+fetchShopData()
+
 function generateShopItem(dataToRender) {
-    console.log(dataToRender)
     for (let i = 0; i < dataToRender.length; i++) {
+        console.log(i)
         const containerElem = document.createElement('div');
         containerElem.setAttribute('class', 'shopItem')
         const nameElem = document.createElement('p')
         const costElem = document.createElement('p')
         const increaseElem = document.createElement('p')
+        const buyButton = document.createElement('button')
+
         nameElem.innerText = dataToRender[i].name
         costElem.innerText = dataToRender[i].cost
         increaseElem.innerText = dataToRender[i].increase
-        containerElem.appendChild.nameElem
-        containerElem.appendChild.costElem
-        containerElem.appendChild.increaseElem
-        document.body.appendChild.containerElem
-        
-        //e.g. titleElem.innerText = dataToRender[i]title
-        //give me title from current i value in array
-        //titleElem.setAttribute('class', 'shopItem')
-        //containerElem.appendchild.titleElem
-        //document.body.appendchild.containerElem
-        //we attach elements to the div, then the div to the page 
-        //or shop div.
+        buyButton.innerText = 'Buy!'
+
+        containerElem.appendChild(buyButton)
+        containerElem.appendChild(nameElem)
+        containerElem.appendChild(costElem)
+        containerElem.appendChild(increaseElem)
+        shopDiv.appendChild(containerElem)
+
+        containerElem.setAttribute('class', 'shopItem')
     }
 }
 
-//you cannot afford this notification
 
+//you cannot afford this notification
 
 //also need to store cps value in local storage
 //same as cookie count
-
 
 //could potentially store cookie count and cps
 //in an object then target them to get their
 //value.
 
-
 //stringify, set item, getitem, parse will store
 //and retrieve object.
 
-
 //create purchases array that shows how many of each
 //item has been bought (also stored in local)
+
+//let purchases = []
 
 
 //make sure things that need to be global variables
 //are in teh scope
 
-//for each element in the api array 
+//(for each) element in the api array 
 
 
 //liams example of event listener for shop upgrades
@@ -99,7 +106,9 @@ function generateShopItem(dataToRender) {
    // alert("You need more cookies");
     //return;
 
-/*if (cookies < item.cost) {
+/* sams example
+
+if (cookies < item.cost) {
     alert (cant buy)
 } else {cps += item.cps
     cookies -= item.cost
