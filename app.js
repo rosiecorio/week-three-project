@@ -65,7 +65,7 @@ function generateShopItem(dataToRender) {
 
         containerElem.setAttribute('class', 'shopItem')
         buyButton.setAttribute('id', 'buyItemButton')
-        //increaseElem.setAttribute('hidden', '')
+        increaseElem.setAttribute('hidden', '')
 
         buyButton.addEventListener('click', function () {
                if (currentCount > dataToRender[i].cost) {
@@ -89,10 +89,6 @@ function generateShopItem(dataToRender) {
 
 //you cannot afford this notification
 
-//could potentially store cookie count and cps
-//in an object then target them to get their
-//value.
-
 //stringify, set item, getitem, parse will store
 //and retrieve object.
 
@@ -105,19 +101,3 @@ function generateShopItem(dataToRender) {
 //are in teh scope
 
 //(for each) element in the api array 
-
-
-//liams example of event listener for shop upgrades
-//if (item.cost >upgrade) {
-   // alert("You need more cookies");
-    //return;
-
-/* sams example
-
-if (cookies < item.cost) {
-    alert (cant buy)
-} else {cps += item.cps
-    cookies -= item.cost
-}
-    update content 
-*/ 
