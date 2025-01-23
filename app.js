@@ -40,7 +40,6 @@ setInterval(() => {
 async function fetchShopData() {
     const response = await fetch('https://cookie-upgrade-api.vercel.app/api/upgrades')
     const data = await response.json()
-    console.log(data)
     generateShopItem(data)
 }
 
@@ -48,7 +47,6 @@ fetchShopData()
 
 function generateShopItem(dataToRender) {
     for (let i = 0; i < dataToRender.length; i++) {
-        console.log(i)
         const containerElem = document.createElement('div');
         containerElem.setAttribute('class', 'shopItem')
         const nameElem = document.createElement('p')
@@ -68,9 +66,25 @@ function generateShopItem(dataToRender) {
         shopDiv.appendChild(containerElem)
 
         containerElem.setAttribute('class', 'shopItem')
+        buyButton.setAttribute('id', 'buyItemButton')
         //increaseElem.setAttribute('hidden', '')
+
+        buyButton.addEventListener('click', buyItem)
+    
+        //write function for buying items from shop
+
+        let cost = parseInt(costElem)
+        let increaseCps = parseInt(increaseElem)
+
+        function buyItem(item) {
+            if (currentCount > item.costElem) {
+            cps += item.increaseElem
+            currentCount -= item.costElem
+            }
+        }
     }
 }
+
 
 //you cannot afford this notification
 
