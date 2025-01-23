@@ -55,6 +55,7 @@ header {
     height: 230x;
     justify-self: center;
     align-self: center;
+    margin-bottom: 15px;
 }
 
 .cookies {
