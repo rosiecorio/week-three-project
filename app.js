@@ -35,11 +35,6 @@ setInterval(() => {
     localStorage.setItem('count', currentCount)
 }, 1000)
 
-//need to store cookie count with added cps in local storage
-//currently only stores cookie count when it is clicked,
-//not when cps are added.
-
-
 //fetching shop data
 
 async function fetchShopData() {
@@ -73,14 +68,11 @@ function generateShopItem(dataToRender) {
         shopDiv.appendChild(containerElem)
 
         containerElem.setAttribute('class', 'shopItem')
+        //increaseElem.setAttribute('hidden', '')
     }
 }
 
-
 //you cannot afford this notification
-
-//also need to store cps value in local storage
-//same as cookie count
 
 //could potentially store cookie count and cps
 //in an object then target them to get their
@@ -93,7 +85,6 @@ function generateShopItem(dataToRender) {
 //item has been bought (also stored in local)
 
 //let purchases = []
-
 
 //make sure things that need to be global variables
 //are in teh scope
