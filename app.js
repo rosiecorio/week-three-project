@@ -5,13 +5,11 @@ const perSec = document.getElementById('perSec')
 const autoClicker = document.getElementById('displayAutoClicker')
 const buyClicker = document.getElementById('buyClicker')
 
-
-//adds 1 cookie for every click
-clicker.addEventListener('click', handleClick)
-
 let currentCount = parseInt(localStorage.getItem('count')) || 0;
 let cps = parseInt(localStorage.getItem('cps')) || 1;
 perSec.textContent = cps
+
+clicker.addEventListener('click', handleClick)
 
 function handleClick() {
     currentCount++

@@ -80,15 +80,24 @@ header {
 
 #buyItemButton {
     border-radius: 10px;
+    background-color: white
+}
+
+#buyItemButton:active {
+    transform: translateY(2px);
 }
 
 #buyItemButton:hover {
-
+    background-color: rgb(241, 229, 229);
 }
 
 #clicker {
     border: none;
     background-color: rgb(216, 77, 42);
+}
+
+#clicker:active {
+    transform: translateY(10px);
 }
 
 h4 {
