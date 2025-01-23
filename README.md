@@ -5,4 +5,4 @@ https://awik.io/rotate-element-indefinitely-css-animation/#:~:text=You%20can%20r
 I used this code to make my cookie rotate.
 
 
-next commit: animated spinning cookie, implemented cps setInterval function.
+next commit: 'encounted cookies + cps bug, created array loop for API, not yet retrieving data.'

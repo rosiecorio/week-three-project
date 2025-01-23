@@ -21,44 +21,52 @@ function handleClick() {
 //need to store value as number
 let cps = 1
 perSec.textContent = cps
-//add cps interval function
+
 cpsInterval = setInterval(() => {
     currentCount = parseInt(currentCount) + cps;
     cookieCount.textContent = currentCount;
     localStorage.setItem('cps', cps)
 }, 1000)
 
+//need to store cookie count with added cps in local storage
+//currently only stores cookie count when it is clicked,
+//not when cps are added.
+
+
 //fetching shop data
 
-/*async function fetchShopData() {
+async function fetchShopData() {
     const response = await fetch(`https://cookie-upgrade-api.vercel.app/api/upgrades`)
     const data = await response.json()
     console.log(data)
-    generateAutoClicker(data)
+    generateShopItem(data)
 }
 
-function generateAutoClicker(dataToRender) {
+function generateShopItem(dataToRender) {
     console.log(dataToRender)
     for (let i = 0; i < dataToRender.length; i++) {
         const containerElem = document.createElement('div');
-        //const contentElem = create element for content in div
+        containerElem.setAttribute('class', 'shopItem')
+        const nameElem = document.createElement('p')
+        const costElem = document.createElement('p')
+        const increaseElem = document.createElement('p')
+        nameElem.innerText = dataToRender[i].name
+        costElem.innerText = dataToRender[i].cost
+        increaseElem.innerText = dataToRender[i].increase
+        containerElem.appendChild.nameElem
+        containerElem.appendChild.costElem
+        containerElem.appendChild.increaseElem
+        document.body.appendChild.containerElem
         
         //e.g. titleElem.innerText = dataToRender[i]title
         //give me title from current i value in array
         //titleElem.setAttribute('class', 'shopItem')
         //containerElem.appendchild.titleElem
         //document.body.appendchild.containerElem
-        
         //we attach elements to the div, then the div to the page 
         //or shop div.
     }
 }
-
-/*function generateAutoClicker(data_to_render) {
-    autoClicker.innerHTML = ''
-    console.log(data_to_render)
-    autoClicker.innerText = data
-}*/
 
 //you cannot afford this notification
 
