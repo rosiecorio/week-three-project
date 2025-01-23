@@ -67,22 +67,25 @@ function generateShopItem(dataToRender) {
         buyButton.setAttribute('id', 'buyItemButton')
         //increaseElem.setAttribute('hidden', '')
 
-        buyButton.addEventListener('click', buyItem)
+        buyButton.addEventListener('click', function () {
+               if (currentCount > dataToRender[i].cost) {
+                    cps += dataToRender[i].increase
+                    currentCount -= dataToRender[i].cost
+                    updateCurrentCount()
+                    saveStorage()
+                    }                
+                }
+            )
     
         //write function for buying items from shop
 
-        let cost = parseInt(costElem)
-        let increaseCps = parseInt(increaseElem)
-
-        function buyItem(item) {
-            if (currentCount > item.costElem) {
-            cps += item.increaseElem
-            currentCount -= item.costElem
-            }
-        }
+       
     }
 }
 
+//every time an item is successfully bought, add 1
+//to the value of the upgrades variable in local
+//storage.
 
 //you cannot afford this notification
 
