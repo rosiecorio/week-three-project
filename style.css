@@ -5,7 +5,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 10px;
 }
 
@@ -15,13 +15,19 @@ img {
 
 header {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     margin-top: 50px;
     background-color: antiquewhite;
     border: solid black 3px;
     border-radius: 25px;
     width: 400px;
     justify-self: center;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .shop{
@@ -33,7 +39,7 @@ header {
     border: 5px solid black;
     border-radius: 20px;
     background-color: antiquewhite;
-    width: 320px;
+    width: 280px;
     height: 430px;
     display: flex;
     flex-direction: column;
@@ -109,11 +115,11 @@ h4 {
     animation: spin 3s infinite linear;
   }
 
-  /*@keyframes spin {
+  @keyframes spin {
     from {
       transform: rotate(0deg);
     }
     to {
       transform: rotate(360deg);
     }
-  }*/
+  }
