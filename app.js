@@ -20,18 +20,18 @@ function handleClick() {
     clickEffect()
     currentCount++
     updateCurrentCount()
+    backingTrack.play()
 }
 
 function clickEffect() {
     clickSound.play()
 }
 
+const backingTrack = document.createElement('audio')
 //make background music and control bar
 
 function backgroundMusic() {
-    const backingTrack = document.createElement('audio')
     backingTrack.setAttribute('src', 'kid-games-music-comedy-situation-soundtrack-play-arcade-283659.mp3')
-    backingTrack.play()
 
     const playButton = document.createElement('button')
     playButton.setAttribute('class', 'musicControl')
