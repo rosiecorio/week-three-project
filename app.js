@@ -21,7 +21,6 @@ function handleClick() {
     clickEffect()
     currentCount++
     updateCurrentCount()
-    backingTrack.play()
     titleChange.textContent = ('🍪🍪 Appease the cookie gods!!! 🍪🍪')
 }
 
@@ -59,8 +58,8 @@ function backgroundMusic() {
     })
 
     muteButton.addEventListener('click', () => {
-        if (backingTrack.muted = true) {
-            backingTrack.removeAttribute('muted')
+        if (backingTrack.muted == true) {
+            backingTrack.muted = false
         } else {
             backingTrack.muted = true
         }
