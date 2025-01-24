@@ -4,6 +4,8 @@ const shopDiv = document.getElementById('shopDiv')
 const perSec = document.getElementById('perSec')
 const autoClicker = document.getElementById('displayAutoClicker')
 const buyClicker = document.getElementById('buyClicker')
+const clickSound = document.getElementById('clickSound')
+
 
 let currentCount = parseInt(localStorage.getItem('count')) || 0;
 let cps = parseInt(localStorage.getItem('cps')) || 1;
@@ -12,8 +14,13 @@ perSec.textContent = cps
 clicker.addEventListener('click', handleClick)
 
 function handleClick() {
+    clickEffect()
     currentCount++
     updateCurrentCount()
+}
+
+function clickEffect() {
+    clickSound.play()
 }
 
 function updateCurrentCount() {
@@ -86,8 +93,6 @@ function generateShopItem(dataToRender) {
 //to the value of the upgrades variable in local
 //storage.
 
-//you cannot afford this notification
-
 //stringify, set item, getitem, parse will store
 //and retrieve object.
 
@@ -96,7 +101,12 @@ function generateShopItem(dataToRender) {
 
 //let purchases = []
 
-//make sure things that need to be global variables
-//are in teh scope
-
 //(for each) element in the api array 
+
+//figure out a way to apply a specific image to appear
+//when different buy buttons are clicked
+
+// potentially add background music for the game
+// with a toggle button to turn it off
+
+//add sound effect on click of cookie.

@@ -22,6 +22,10 @@ header {
     height: 230px;
 }
 
+h1 {
+    margin-bottom: 5px;
+}
+
 .title {
     text-align: center;
     margin-bottom: 50px;
@@ -117,6 +121,12 @@ header {
 }
 
 #clicker:active {
+    transform: translateY(10px);
+}
+
+/* why isnt this working? ^ v */
+
+#clicker:hover {
     transform: translateY(10px);
 }
 
