@@ -6,6 +6,7 @@ const autoClicker = document.getElementById('displayAutoClicker')
 const buyClicker = document.getElementById('buyClicker')
 const clickSound = document.getElementById('clickSound')
 const controlBar = document.getElementById('controlBar')
+const titleChange = document.getElementById('titleChange')
 
 
 let currentCount = parseInt(localStorage.getItem('count')) || 0;
@@ -21,6 +22,7 @@ function handleClick() {
     currentCount++
     updateCurrentCount()
     backingTrack.play()
+    titleChange.textContent = ('🍪🍪 Appease the cookie gods!!! 🍪🍪')
 }
 
 function clickEffect() {
