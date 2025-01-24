@@ -180,5 +180,11 @@ h4 {
     .title {
         width: 300px;
         align-self: center;
+        margin-top: 10px;
+    }
+
+    #shopDiv {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
