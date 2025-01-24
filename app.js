@@ -12,6 +12,8 @@ let currentCount = parseInt(localStorage.getItem('count')) || 0;
 let cps = parseInt(localStorage.getItem('cps')) || 1;
 perSec.textContent = cps
 
+//adds cookie every click, plays sound effect and updates
+//local storage of cookie amount
 clicker.addEventListener('click', handleClick)
 
 function handleClick() {
@@ -24,7 +26,7 @@ function clickEffect() {
     clickSound.play()
 }
 
-//make background music with toggle buttons
+//make background music and control bar
 
 function backgroundMusic() {
     const backingTrack = document.createElement('audio')
@@ -41,12 +43,25 @@ function backgroundMusic() {
     pauseButton.textContent = '⏸️'
     controlBar.appendChild(pauseButton)
 
+    const muteButton = document.createElement('button')
+    muteButton.setAttribute('class', 'musicControl')
+    muteButton.textContent = '🔇'
+    controlBar.appendChild(muteButton)
+
     playButton.addEventListener('click', () => {
         backingTrack.play()
     })
 
     pauseButton.addEventListener('click', () => {
         backingTrack.pause()
+    })
+
+    muteButton.addEventListener('click', () => {
+        if (backingTrack.muted = true) {
+            backingTrack.removeAttribute('muted')
+        } else {
+            backingTrack.muted = true
+        }
     })
 }
 
