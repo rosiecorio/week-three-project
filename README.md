@@ -11,4 +11,4 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3
 I used this code to achieve button click effect on shop and cookie
 
 
-next commit: 'encounted cookies + cps bug, created array loop for API, not yet retrieving data.'
+next commit: 'added favicon, working on making click sound repeat for every click even if sound has not finished playing.'

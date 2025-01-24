@@ -5,6 +5,7 @@ const perSec = document.getElementById('perSec')
 const autoClicker = document.getElementById('displayAutoClicker')
 const buyClicker = document.getElementById('buyClicker')
 const clickSound = document.getElementById('clickSound')
+const controlBar = document.getElementById('controlBar')
 
 
 let currentCount = parseInt(localStorage.getItem('count')) || 0;
@@ -22,6 +23,34 @@ function handleClick() {
 function clickEffect() {
     clickSound.play()
 }
+
+//make background music with toggle buttons
+
+function backgroundMusic() {
+    const backingTrack = document.createElement('audio')
+    backingTrack.setAttribute('src', 'kid-games-music-comedy-situation-soundtrack-play-arcade-283659.mp3')
+    backingTrack.play()
+
+    const playButton = document.createElement('button')
+    playButton.setAttribute('class', 'musicControl')
+    playButton.textContent = '▶️'
+    controlBar.appendChild(playButton)
+
+    const pauseButton = document.createElement('button')
+    pauseButton.setAttribute('class', 'musicControl')
+    pauseButton.textContent = '⏸️'
+    controlBar.appendChild(pauseButton)
+
+    playButton.addEventListener('click', () => {
+        backingTrack.play()
+    })
+
+    pauseButton.addEventListener('click', () => {
+        backingTrack.pause()
+    })
+}
+
+backgroundMusic()
 
 function updateCurrentCount() {
     cookieCount.textContent = currentCount
