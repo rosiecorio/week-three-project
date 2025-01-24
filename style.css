@@ -145,7 +145,7 @@ h4 {
     }
 
     img {
-        height: 140px;
+        height: 160px;
     }
     
     body {
@@ -200,7 +200,7 @@ h4 {
         display: flex;
         flex-wrap: wrap;
         width: 325px;
-        height: 360px;
+        height: 350px;
     }
 
     .cookieSec {
