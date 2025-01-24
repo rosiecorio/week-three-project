@@ -18,7 +18,7 @@ function handleClick() {
 
 function updateCurrentCount() {
     cookieCount.textContent = currentCount
-    cps.textContent = cps
+    perSec.textContent = cps
 }
 
 function saveStorage() {
@@ -71,15 +71,14 @@ function generateShopItem(dataToRender) {
                if (currentCount > dataToRender[i].cost) {
                     cps += dataToRender[i].increase
                     currentCount -= dataToRender[i].cost
+                    console.log(cps)
                     updateCurrentCount()
                     saveStorage()
-                    }                
-                }
-            )
-    
-        //write function for buying items from shop
-
-       
+                    } else if (currentCount < dataToRender[i].cost) {
+                    alert("👿 You do not have enough cookies! The cookie gods are angry. 👿")
+                }          
+            }
+        )         
     }
 }
 

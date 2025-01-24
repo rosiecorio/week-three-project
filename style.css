@@ -10,7 +10,7 @@ body {
 }
 
 img {
-    height: 400px;
+    height: 370px;
 }
 
 header {
@@ -20,7 +20,7 @@ header {
 
 .title {
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     margin-top: 50px;
     background-color: antiquewhite;
     border: solid black 3px;
@@ -51,6 +51,7 @@ header {
     flex-direction: column;
     justify-self: center;
     align-items: right;
+    margin-top: 8px;
 }
 
 .countContainer {
@@ -62,6 +63,7 @@ header {
     justify-self: center;
     align-self: center;
     margin-bottom: 15px;
+    grid-row: 1/2;
 }
 
 .cookies {
@@ -130,3 +132,53 @@ h4 {
       transform: rotate(360deg);
     }
   }
+
+@media (min-width: 320px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    img {
+        height: 100px;
+    }
+    
+    body {
+        font-size: 0.5em;
+    }
+
+    .countContainer {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .cookies {
+        margin: 0;
+    }
+
+    #cookieCount {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .cps {
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 140px;
+        text-decoration: underline;
+        font-size: 15px;
+    }
+
+    .title {
+        width: 300px;
+        align-self: center;
+    }
+}
