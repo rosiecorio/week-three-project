@@ -25,6 +25,7 @@ function handleClick() {
 }
 
 function clickEffect() {
+    clickSound.currentTime = 0;
     clickSound.play()
 }
 
@@ -150,8 +151,3 @@ function generateShopItem(dataToRender) {
 
 //figure out a way to apply a specific image to appear
 //when different buy buttons are clicked
-
-// potentially add background music for the game
-// with a toggle button to turn it off
-
-//add sound effect on click of cookie.
