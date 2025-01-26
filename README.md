@@ -23,6 +23,7 @@ I also achieved several stretch goals:
 -I have used a single function to manage all shop upgrades
 -I've added a sound effect for clicking the cookie and a rotation animation on the cookie
 -I've added a title content change that occurs on the inital click of the cookie
+-I've added a media query for a mobile accessible version of the game.
 
 
 🎯 Were there any requirements or goals that you were unable to achieve?
