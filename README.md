@@ -18,13 +18,24 @@ I have achieved all requirements for this task.
 
 My functions are organised and reusable, I have event listeners to handle user interactions, have stored the cookie count and cps in local storage, have used a setInterval to manage the games state and my store upgrades are provided by the API which gives them all functionality.
 
+I also achieved several stretch goals:
+-I added background music to the game with a custom control bar
+-I have used a single function to manage all shop upgrades
+-I've added a sound effect for clicking the cookie and a rotation animation on the cookie
+-I've added a title content change that occurs on the inital click of the cookie
+
+
 🎯 Were there any requirements or goals that you were unable to achieve?
 
 I have achieved all goals I set out to achieve and am very happy with my project.
 
+I had originally hoped to have the background music play automatically when the page was loaded, however I realised that browsers do not allow music to play unless the page is interacted with, so I changed the music to play once the play button has been pressed.
 
-What errors or bugs did you encounter while completing your assignment? How did you solve them?
+
+🎯 What errors or bugs did you encounter while completing your assignment? How did you solve them?
 
 There were several bugs and errors that occured throughout the project.
 
-What went really well and what could have gone better?
+I encountered a bug where my cps element content would only update once the page had been refreshed, this was a syntax error which was easily fixed.
+
+I also encountered a bug where my mute button would only mute, it wouldn't unmute. This took me a while to correct, but I realised that in my muting function I was resetting the value rather than comparing it in my if statement. This was a simple fix of changing = to ==.
