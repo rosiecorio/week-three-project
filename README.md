@@ -31,6 +31,8 @@ I have achieved all goals I set out to achieve and am very happy with my project
 
 I had originally hoped to have the background music play automatically when the page was loaded, however I realised that browsers do not allow music to play unless the page is interacted with, so I changed the music to play once the play button has been pressed.
 
+I had also aimed to add a display that showed all upgrades that had been bought by the player, but due to time constraints during my weekend I didn't achieve this.
+
 
 🎯 What errors or bugs did you encounter while completing your assignment? How did you solve them?
 
